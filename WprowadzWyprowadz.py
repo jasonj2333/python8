@@ -9,4 +9,6 @@ def WyprowadzDane():
     for i in range(N):
         print(a[i])
 
+WprowadzDane()
+WyprowadzDane()
 

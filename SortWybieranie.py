@@ -19,19 +19,29 @@ def MaksWybor(starti):
     return maksi
 
 def MinWybor(starti):
-    maksi = starti
-    maks = a[maksi]
+    mini = starti
+    min = a[mini]
     for i in range(starti + 1, N):
-        if a[i] < maks:
-            maksi = i
-            maks = a[maksi]
-    return maksi
+        if a[i] < min:
+            mini = i
+            mins = a[mini]
+    return mini
 
-def SortWybor():
+def SortMaksWybor():
     for i in range(N-1):
         maksi = MaksWybor(i)
         t = a[i]
         a[i] = a[maksi]
         a[maksi] = t
+        
+def SortMinWybor():
+    for i in range(N-1):
+        mini = MinWybor(i)
+        t = a[i]
+        a[i] = a[mini]
+        a[mini] = t
     
+WprowadzDane()
+SortMinWybor()
+WyprowadzDane()
 
