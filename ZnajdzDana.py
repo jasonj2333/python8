@@ -1,4 +1,4 @@
-N = 5
+N = 50
 a = [0] * N
 MAX_DANA = 99
 
@@ -11,6 +11,24 @@ def WprowadzDane():
             a[i] = 0
         if a[i] > MAX_DANA:
             a[i] = MAX_DANA
+
+
+def SortZlicz():
+    liczniki = [0] * (MAX_DANA+1)
+    for i in range(N):
+        liczniki[a[i]] = liczniki[a[i]]+1
+    poz = 0
+    for i in range(MAX_DANA+1):
+        for j in range(liczniki[i]):
+            a[poz] = i
+            poz = poz + 1
+
+
+def SzukajLiniowo(szukana):
+    for i in range(N):
+        if a[i] == szukana:
+            return i
+    return -1
 
 
 def ZnajdzDana(wartosc):
@@ -30,24 +48,12 @@ def ZnajdzDana(wartosc):
 
 def LosujDane():
     import random
-    # random.seed()
+    random.seed()
     for i in range(N):
         a[i] = random.randint(0, MAX_DANA)
 
 
-def SortZlicz():
-    liczniki = [0] * (MAX_DANA+1)
-    for i in range(N):
-        liczniki[a[i]] = liczniki[a[i]]+1
-    poz = 0
-    for i in range(MAX_DANA+1):
-        for j in range(liczniki[i]):
-            a[poz] = i
-            poz = poz + 1
-
-
 print("-------------------------------------------------------------")
-# WprowadzDane()
 LosujDane()
 SortZlicz()
 print(a)
