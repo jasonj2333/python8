@@ -28,7 +28,7 @@ def MinWybor(starti):
     for i in range(starti + 1, N):
         if a[i] < min:
             mini = i
-            mins = a[mini]
+            min = a[mini]
     return mini
 
 
