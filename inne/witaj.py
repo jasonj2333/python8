@@ -1,0 +1,5 @@
+print('Część, mam na imię Tomek.')
+imie = input('A ty jak masz na imię? ')
+print('Cześć', imie, '!!!')
+print()
+print('-------')
