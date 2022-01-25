@@ -4,7 +4,6 @@ def szyfruj_znak(znak, klucz):
     if ord(znak) < 65 or (ord(znak) > 90 and ord(znak) < 97) or ord(znak) > 122: return znak
     if ord(znak) < 97: a = 65
     else: a = 97
-    #(nr_znaku_w_asci - 97(to numer a) + klucz) reszta z dzielenia przez 26(ilosc znakow w alfabecie) + 97
     return chr((ord(znak) - a + klucz) % 26 + a)
 
 def szyfruj(tekst, klucz):

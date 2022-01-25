@@ -10,7 +10,7 @@ def szyfruj_znak_pl(znak, klucz):
     else: a=26
         
     i =  litery.index(znak)
-    return litery[(i-a+klucz)%int(dl-a) +a]
+    return litery[(i-a+klucz)%int(dl/2) + a]
 
 def szyfruj_pl(tekst, klucz):
     pom = ""

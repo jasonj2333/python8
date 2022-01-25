@@ -13,5 +13,9 @@ def szyfruj(tekst, klucz):
 def deszyfruj(tekst, klucz):
     return szyfruj(tekst, 26-klucz)
 
-szyfrogram = szyfruj("programowanie", 3)
+szyfrogram = szyfruj("python", 3)
+
+print(szyfrogram)
+
+print(deszyfruj(szyfrogram, 3))
 
